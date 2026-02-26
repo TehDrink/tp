@@ -21,15 +21,16 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Project Advisor
 
-### Jane Doe
+### Teh Huan Xi Kester
 
-<img src="images/johndoe.png" width="200px">
+<img src="images/tehdrink.png" width="200px">
 
-[[github](http://github.com/johndoe)]
+[[homepage](https://www.tehdrink.com)]
+[[github](https://github.com/tehdrink)]
 [[portfolio](team/johndoe.md)]
 
-* Role: Team Lead
-* Responsibilities: UI
+* Role: Developer (To be updated)
+* Responsibilities: (To be updated)
 
 ### Johnny Doe
 
