@@ -1,4 +1,4 @@
-# Welcome to `BlockBook`! [![codecov Status](https://codecov.io/github/AY2526S2-CS2103-F13-1/team/graph/badge.svg?token=I5SOGGMD2T)](https://codecov.io/github/AY2526S2-CS2103-F13-1/team)
+# Welcome to `BlockBook`! [![Java CI](https://github.com/AY2526S2-CS2103-F13-1/tp/actions/workflows/gradle.yml/badge.svg)](https://github.com/AY2526S2-CS2103-F13-1/tp/actions/workflows/gradle.yml) [![codecov Status](https://codecov.io/github/AY2526S2-CS2103-F13-1/team/graph/badge.svg?token=I5SOGGMD2T)](https://codecov.io/github/AY2526S2-CS2103-F13-1/team)
 | The address book for Minecrafters
 
 [Current milestone (v1.1)](https://github.com/AY2526S2-CS2103-F13-1/tp/milestone/1)
