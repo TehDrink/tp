@@ -313,32 +313,222 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-(For all use cases below, the **System** is the `AddressBook` and the **Actor** is the `user`, unless specified otherwise)
+(For all use cases below, the **System** is the `BlockBook (BB)` and the **Actor** is the `user`, unless specified 
+otherwise)
 
-**Use case: Delete a person**
+**UC01 - Add Contact**
 
 **MSS**
 
-1.  User requests to list persons
-2.  AddressBook shows a list of persons
-3.  User requests to delete a specific person in the list
-4.  AddressBook deletes the person
+1.  User chooses to add a new contact.
+2.  BB requests the contact's details (gamertag, server name, optional label).
+3.  User enters the requested details.
+4.  BB requests confirmation.
+5.   User confirms.
+6.    BB saves the new contact and displays the updated contact list.
 
-    Use case ends.
+Use case ends.
 
 **Extensions**
 
-* 2a. The list is empty.
+3a. BB detects that the gamertag field is empty or contains invalid characters.
 
-  Use case ends.
+- 3a1. BB displays an error and requests correct data.
 
-* 3a. The given index is invalid.
+- 3a2. User enters new data.
 
-    * 3a1. AddressBook shows an error message.
+- Steps 3a1–3a2 are repeated until the data entered is correct.
 
-      Use case resumes at step 2.
+- Use case resumes from step 4.
 
-*{More to be added}*
+3b. BB detects that a contact with the same gamertag already exists.
+
+- 3b1. BB warns the user of the duplicate entry and asks whether to proceed.
+- 3b2. User chooses to proceed or cancel.
+- If User cancels, use case ends. Otherwise, use case resumes from step 4.
+
+*a. At any time, User chooses to cancel adding the contact.
+
+- *a1. BB discards all entered data.
+- Use case ends.
+
+**UC02 - List All Contacts**
+
+**MSS**
+
+1. User chooses to view all saved contacts.
+2. BB retrieves all entries.
+3. BB displays a list of all contacts with their basic details.
+
+Use case ends.
+
+**Extensions**
+
+2a. The contact list is empty.
+
+- 2a1. BB informs the user that no contacts are currently stored. 
+- Use case ends.
+
+**UC03 - Favourite a Contact**
+
+**MSS**
+
+1. User chooses to favourite a contact.
+2. BB requests the gamertag of the contact to favourite.
+3. User enters the gamertag.
+4. BB marks the contact as a favourite and confirms the update.
+
+Use case ends.
+
+**Extensions**
+
+3a. BB cannot find a contact matching the entered gamertag.
+
+- 3a1. BB displays an error and requests a valid gamertag.
+- 3a2. User enters a new gamertag.
+- Steps 3a1–3a2 are repeated until a match is found.
+- Use case resumes from step 4.
+
+4a. The contact is already marked as a favourite.
+
+- 4a1. BB notifies the user that the contact is already a favourite.
+- Use case ends.
+
+**UC04 - Add Profile Picture to Contact**
+
+**MSS**
+
+1. User chooses to add a profile picture to a contact.
+2. BB requests the contact's gamertag.
+3. User enters the gamertag.
+4. BB requests the image to use as the profile picture.
+5. User provides the image.
+6. BB requests confirmation.
+7. User confirms.
+8. BB saves the profile picture and displays the updated contact profile.
+
+Use case ends.
+
+**Extensions**
+
+3a. BB detects that the gamertag is empty or contains invalid characters.
+
+- 3a1. BB displays an error and requests correct data.
+- 3a2. User enters new data.
+- Steps 3a1–3a2 are repeated until the data entered is correct.
+- Use case resumes from step 4.
+
+5a. BB detects that the provided image is invalid or cannot be accessed.
+
+- 5a1. BB displays an error and requests a valid image.
+- 5a2. User provides new image data.
+- Steps 5a1–5a2 are repeated until the data entered is correct.
+- Use case resumes from step 6.
+
+*a. At any time, User chooses to cancel.
+
+- *a1. BB discards all entered data.
+- Use case ends.
+
+**UC05 - Add Note to Contact**
+
+**MSS**
+
+1. User chooses to add a note to an existing contact.
+2. BB requests the gamertag of the target contact.
+3. User enters the gamertag.
+4. BB displays the contact's current details.
+5. User enters the note to be added.
+6. BB saves the note and displays the updated contact profile.
+
+Use case ends.
+
+**Extensions**
+
+3a. BB cannot find a contact matching the entered gamertag.
+
+- 3a1. BB displays an error and requests a valid gamertag.
+- 3a2. User enters a new gamertag.
+- Steps 3a1–3a2 are repeated until a match is found.
+- Use case resumes from step 4.
+
+5a. User enters a note that exceeds the maximum character limit.
+
+- 5a1. BB displays an error indicating the limit and requests a shorter note.
+- 5a2. User enters a new note.
+- Use case resumes from step 6.
+
+*a. At any time, User chooses to cancel.
+
+- *a1. BB discards all unsaved changes.
+- Use case ends.
+
+**UC06 - Sort Contacts by Added Date**
+
+**MSS**
+
+1. User chooses to sort contacts by added date.
+2. BB displays all contacts sorted in chronological order by added date, from most recent.
+
+Use case ends.
+
+**Extensions**
+
+2a. BB finds no contacts.
+- 2a1. BB informs the user that there are no contacts.
+- Use case ends.
+
+**UC07 - Update Contact**
+
+**MSS**
+
+1. User chooses to update a contact's details.
+2. BB requests the current gamertag of the contact.
+3. User enters the current gamertag.
+4. BB displays the contact's current details and requests which attribute to change.
+5. User enters the attribute to change.
+6. BB requests the new value for the attribute.
+7. User enters the new value.
+8. BB requests confirmation.
+9. User confirms.
+10. BB updates the contact and displays the updated contact profile.
+
+Use case ends.
+
+**Extensions**
+
+3a. BB cannot find a contact matching the entered gamertag.
+
+- 3a1. BB displays an error and requests a valid gamertag.
+- 3a2. User enters a new gamertag.
+- Steps 3a1–3a2 are repeated until a match is found.
+- Use case resumes from step 4.
+
+5a. BB cannot identify the attribute to edit.
+
+- 5a1. BB displays an error and requests a valid attribute name.
+- 5a2. User enters a new attribute name.
+- Steps 5a1–5a2 are repeated until a valid attribute is entered.
+- Use case resumes from step 6.
+
+7a. BB detects that the new gamertag is already in use by another contact.
+
+- 7a1. BB warns the user of the conflict and requests a different gamertag.
+- 7a2. User enters a new gamertag.
+- Use case resumes from step 8.
+
+7b. BB detects that the entered value contains invalid characters.
+
+- 7b1. BB displays an error and requests a valid value.
+- 7b2. User enters a new value.
+- Use case resumes from step 8.
+
+*a. At any time, User chooses to cancel.
+
+- *a1. BB discards all changes.
+- Use case ends.
+
+
 
 ### Non-Functional Requirements
 
