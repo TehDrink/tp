@@ -14,7 +14,7 @@
 
 
 * If you are interested in using BlockBook, head over to the [_Quick Start_ section of the **User Guide**](UserGuide.html#quick-start).
-* If you are interested about developing BlockBook, the [**Developer Guide**](DeveloperGuide.html) is a good place to start.
+* If you are interested about developing BlockBook, the [**Developer Guide**](DeveloperGuide.md) is a good place to start.
 
 
 **Acknowledgements**
