@@ -1,14 +1,14 @@
 package seedu.address.model.person;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import org.junit.jupiter.api.Test;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertFalse;
+//import static org.junit.jupiter.api.Assertions.assertTrue;
+//
+//import java.util.Arrays;
+//import java.util.Collections;
+//import java.util.List;
+//
+//import org.junit.jupiter.api.Test;
 
 //import seedu.address.testutil.PersonBuilder;
 
@@ -26,7 +26,8 @@ public class NameContainsKeywordsPredicateTest {
 //        assertTrue(firstPredicate.equals(firstPredicate));
 //
 //        // same values -> returns true
-//        NameContainsKeywordsPredicate firstPredicateCopy = new NameContainsKeywordsPredicate(firstPredicateKeywordList);
+//        NameContainsKeywordsPredicate firstPredicateCopy =
+//          new NameContainsKeywordsPredicate(firstPredicateKeywordList);
 //        assertTrue(firstPredicate.equals(firstPredicateCopy));
 //
 //        // different types -> returns false
@@ -42,7 +43,8 @@ public class NameContainsKeywordsPredicateTest {
 //    @Test
 //    public void test_nameContainsKeywords_returnsTrue() {
 //        // One keyword
-//        NameContainsKeywordsPredicate predicate = new NameContainsKeywordsPredicate(Collections.singletonList("Alice"));
+//        NameContainsKeywordsPredicate predicate =
+//          new NameContainsKeywordsPredicate(Collections.singletonList("Alice"));
 //        assertTrue(predicate.test(new PersonBuilder().withName("Alice Bob").build()));
 //
 //        // Multiple keywords

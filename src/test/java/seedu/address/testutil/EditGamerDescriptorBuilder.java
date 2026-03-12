@@ -1,15 +1,16 @@
 package seedu.address.testutil;
 
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+//import java.util.Set;
+//import java.util.stream.Collectors;
+//import java.util.stream.Stream;
 
 import seedu.address.logic.commands.EditCommand.EditGamerDescriptor;
 //import seedu.address.model.gamer.Address;
 import seedu.address.model.gamer.Email;
-import seedu.address.model.gamer.Name;
 import seedu.address.model.gamer.Gamer;
+import seedu.address.model.gamer.Name;
 import seedu.address.model.gamer.Phone;
+
 //import seedu.address.model.tag.Tag;
 
 /**
@@ -33,8 +34,8 @@ public class EditGamerDescriptorBuilder {
     public EditGamerDescriptorBuilder(Gamer person) {
         descriptor = new EditGamerDescriptor();
         descriptor.setName(person.getName());
-//        descriptor.setPhone(person.getPhone());
-//        descriptor.setEmail(person.getEmail());
+        // descriptor.setPhone(person.getPhone());
+        // descriptor.setEmail(person.getEmail());
     }
 
     /**
